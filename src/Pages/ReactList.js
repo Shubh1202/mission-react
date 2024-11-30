@@ -16,7 +16,7 @@ const itemList = [
 
 const ReactList = () => {
     return (
-        <>
+        <div className="container mx-auto p-4">
             <div className="flex items-center justify-center">
                 <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
                     <h4 className="text-2xl font-bold text-center text-blue-600 mb-6">React List</h4>
@@ -25,7 +25,7 @@ const ReactList = () => {
                     </ol>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

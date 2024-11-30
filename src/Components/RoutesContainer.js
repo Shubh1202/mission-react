@@ -23,7 +23,7 @@ const RoutesContainer = () => {
             <BrowserRouter>
                 <div className='min-h-screen flex flex-col bg-gray-100' id='wrapper'>
                     <Navbar />
-                    <div className='flex-grow container mx-auto p-4'>
+                    <div className='flex-grow'>
                         <Routes>
                             <Route path='/' element={<Home />} />
                             <Route path='about-us' element={<About />} />

@@ -49,28 +49,30 @@ const RandomString = () => {
 
     useEffect(() => {
         generateNewString()
-    },[stringLength, isNumberAllowed, isCharacterAllowed])
+    },[stringLength, isNumberAllowed, isCharacterAllowed, generateNewString])
 
     return (
-        <div className="flex items-center justify-center">
-            <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
-                <h4 className="text-blue-600 text-2xl font-bold text-center mb-6">Generate Shuffle String/Password</h4>
-                <div className="relative">
-                    <input type="text" name="string" value={randomStr} ref={inputBox} readOnly className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                    <button onClick={copyText} className="absolute top-0 right-0 px-4 py-2 bg-blue-600 text-white flex items-center border border-blue-500 hover:cursor-pointer hover:bg-blue-700 rounded-lg">
-                        Copy
-                    </button>
-                </div>
-                <div className="mt-5 flex items-center justify-center space-x-3">
-                    <p>
-                    <input onChange={(event)=> generateLength(event.target.value)} value={stringLength} type="range" min='0' max='100' className="border border-gray-300 rounded-lg focus:outline-none mr-3"/> Length ({stringLength})
-                    </p>
-                    <p>
-                    <input type="checkbox" onChange={() => allowedNumber(!isNumberAllowed)}/> Number {isNumberAllowed}
-                    </p>
-                    <p>
-                    <input type="checkbox" onChange={() => allowedCharacter(!isCharacterAllowed)}/> Character
-                    </p>
+        <div className="container mx-auto p-4">
+            <div className="flex items-center justify-center">
+                <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
+                    <h4 className="text-blue-600 text-2xl font-bold text-center mb-6">Generate Shuffle String/Password</h4>
+                    <div className="relative">
+                        <input type="text" name="string" value={randomStr} ref={inputBox} readOnly className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        <button onClick={copyText} className="absolute top-0 right-0 px-4 py-2 bg-blue-600 text-white flex items-center border border-blue-500 hover:cursor-pointer hover:bg-blue-700 rounded-lg">
+                            Copy
+                        </button>
+                    </div>
+                    <div className="mt-5 flex items-center justify-center space-x-3">
+                        <p>
+                        <input onChange={(event)=> generateLength(event.target.value)} value={stringLength} type="range" min='0' max='100' className="border border-gray-300 rounded-lg focus:outline-none mr-3"/> Length ({stringLength})
+                        </p>
+                        <p>
+                        <input type="checkbox" onChange={() => allowedNumber(!isNumberAllowed)}/> Number {isNumberAllowed}
+                        </p>
+                        <p>
+                        <input type="checkbox" onChange={() => allowedCharacter(!isCharacterAllowed)}/> Character
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

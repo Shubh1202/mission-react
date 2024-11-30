@@ -4,7 +4,7 @@ import Todos from './Todos'
 const ToDoox = () => {
     const [count, setCount] = useState(0)
     const [todos, setTodos] = useState([])
-    const [newText, addText] = useState('')
+    // const [newText, addText] = useState('')
  
 
     // const addTodo = () => {
@@ -13,7 +13,7 @@ const ToDoox = () => {
 
     const addTodo = useCallback(() => {
         setTodos((todo) => [...todo, 'New Todo'])
-    }, [todos])
+    }, [])
 
 
     const removeToDo = useCallback((index) => {
@@ -47,7 +47,7 @@ const ToDoo = () => {
         count.current++
     }, [inputValue])
     return (
-        <>
+        <div className="container mx-auto p-4">
             <ToDoox />
             <div className='mt-5'>
                 <h1 className='text-2xl font-bold'>useRef Example</h1>
@@ -56,7 +56,7 @@ const ToDoo = () => {
                 <h1>Current Input Value: {inputValue}</h1>
                 <h1>Previous Input Value: {previousInputValue.current}</h1>
             </div>
-        </>
+        </div>
     )
 }
 

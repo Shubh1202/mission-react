@@ -62,16 +62,22 @@ const CurrencyConverter = () => {
     }, [toCurrency, fromCurrency, prxItems, convertCurrency])
 
     return (
-        <div className='flex items-center justify-center'>
-            <div className='shadow-lg rounded-lg p-8 w-full max-w-lg'>
-                <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">Currency Converter</h2>
-                <div className="relative">
-                    <InputBox label='from' amount={amount} setAmount={setAmount} selectedCurrency={fromCurrency} setCurrency={setFromCurrency} currencyList={currencyItemsList}/>
-                    <button onClick={swapCurrency} type='button' className="absolute bg-blue-600 text-white font-bold py-1 px-8 rounded-lg hover:bg-blue-700 transition duration-300 swap-button">Swap</button>
-                    <InputBox label='to' amount={convertedAmount} amountDisable={true} selectedCurrency={toCurrency} setCurrency={setToCurrency} currencyList={currencyItemsList}/>
-                </div>
-                <div className="mt-3">
-                    <button type="button" onClick={convertCurrency} className="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition duration-300">Convert <span className="uppercase">{fromCurrency}</span> to <span className="uppercase">{toCurrency}</span></button>
+        <div className="w-full py-20 bg-cover bg-center h-screen items-center" style={{backgroundImage: "url('https://images.pexels.com/photos/4386442/pexels-photo-4386442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"}}>
+            <div className='flex items-center justify-center'>
+                <div className='shadow-lg rounded-lg p-8 w-full max-w-lg relative' >
+                <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+
+                    <div className="relative z-10">
+                        <h2 className="text-3xl font-bold text-center text-white mb-6">Currency Converter</h2>
+                        <div className="relative">
+                            <InputBox label='from' amount={amount} setAmount={setAmount} selectedCurrency={fromCurrency} setCurrency={setFromCurrency} currencyList={currencyItemsList}/>
+                            <button onClick={swapCurrency} type='button' className="absolute bg-blue-600 text-white font-bold py-1 px-8 rounded-lg hover:bg-blue-700 transition duration-300 swap-button">Swap</button>
+                            <InputBox label='to' amount={convertedAmount} amountDisable={true} selectedCurrency={toCurrency} setCurrency={setToCurrency} currencyList={currencyItemsList}/>
+                        </div>
+                        <div className="mt-3">
+                            <button type="button" onClick={convertCurrency} className="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition duration-300">Convert <span className="uppercase">{fromCurrency}</span> to <span className="uppercase">{toCurrency}</span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -32,7 +32,7 @@ const dataList = [
 const CardComponent = ({data}) =>{
     return (
         <div className="relative h-[400px] w-[300px] rounded-md">
-            <img src={data.image} className='z-0 h-full w-full rounded-md object-cover' />
+            <img src={data.image} className='z-0 h-full w-full rounded-md object-cover' alt={data.image}/>
 
             <div className='absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent'></div>
             <div className='absolute bottom-4 left-4 text-left'>
@@ -51,7 +51,7 @@ const CardComponent = ({data}) =>{
 
 const ReactProps = () => {
     return (
-        <div>
+        <div className="container mx-auto p-4">
             <h2 className="text-2xl font-bold mb-4 text-gray-700">Software Developer & Engineer</h2>
 
             <div className='flex items-center justify-center'>

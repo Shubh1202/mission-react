@@ -1,21 +1,79 @@
+import { PageHeroSection, CallToAction } from '../Components/CommonComponents'
+
+
 const AboutUs = () => {
     return (
-        <>
-            <h2 className="text-2xl font-bold mb-4 text-gray-700">About Us</h2>
+        <div>
+          {/* Hero Section */}
+          <PageHeroSection title='About Us' subTitle='Learn more about our journey, values, and the people who make it all happen.' />
 
-            <div className="text-1xl text-gray-600">
-                <p className="mb-2">
-                    On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.
+   
+          {/* Our Vision and Mission */}
+          <section className='bg-gray-100'>
+            <div className="container mx-auto py-16 px-4 grid lg:grid-cols-2 gap-8">
+              <div className="bg-white shadow-lg p-8 rounded-lg">
+                <h2 className="text-2xl font-bold mb-4 text-blue-600">Our Vision</h2>
+                <p className="text-gray-600">
+                  To be a global leader in providing innovative and sustainable solutions that empower individuals and
+                  businesses to thrive in the digital age.
                 </p>
-                <p className="mb-2">
-                    You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.
+              </div>
+              <div className="bg-white shadow-lg p-8 rounded-lg">
+                <h2 className="text-2xl font-bold mb-4 text-blue-600">Our Mission</h2>
+                <p className="text-gray-600">
+                  To deliver exceptional products and services that inspire trust and foster long-term partnerships with
+                  clients and stakeholders.
                 </p>
-                <p className="mb-2">
-                    To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.
-                </p>
+              </div>
             </div>
-        </>
-    )
+          </section>
+    
+          {/* Our Team */}
+          <section className='bg-white'>
+            <div className="container mx-auto py-16 px-4 text-center">
+              <h2 className="text-3xl font-bold mb-6 text-blue-600">Meet Our Team</h2>
+              <p className="text-gray-600 mb-8">
+                A passionate group of professionals committed to making a difference.
+              </p>
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+                {/* Team Member 1 */}
+                <div className="bg-white shadow-lg p-6 rounded-lg">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Team Member"
+                    className="rounded-full mx-auto w-32 h-32 mb-4"
+                  />
+                  <h3 className="text-xl font-bold">John Doe</h3>
+                  <p className="text-gray-500">CEO & Founder</p>
+                </div>
+                {/* Team Member 2 */}
+                <div className="bg-white shadow-lg p-6 rounded-lg">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Team Member"
+                    className="rounded-full mx-auto w-32 h-32 mb-4"
+                  />
+                  <h3 className="text-xl font-bold">Jane Smith</h3>
+                  <p className="text-gray-500">Chief Technology Officer</p>
+                </div>
+                {/* Team Member 3 */}
+                <div className="bg-white shadow-lg p-6 rounded-lg">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Team Member"
+                    className="rounded-full mx-auto w-32 h-32 mb-4"
+                  />
+                  <h3 className="text-xl font-bold">Mark Johnson</h3>
+                  <p className="text-gray-500">Head of Marketing</p>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          {/* Call to Action */}
+          <CallToAction title='Join Our Journey' subTitle={`Together, we can create something extraordinary. Let's make an impact together.`} buttonText='Contact Us' />
+        </div>
+      );
 }
 
 export default AboutUs

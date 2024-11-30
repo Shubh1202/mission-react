@@ -1,5 +1,5 @@
 import { useCallback, useState, memo, useRef } from "react"
-import Todos from "./Todos"
+// import Todos from "./Todos"
 
 const ToDos = memo(({toDoList, removeToDo}) => {
     console.log(`Children component`)
@@ -66,7 +66,7 @@ const UseCallBack = () => {
     }, [toDoList])
     // console.log(`Parent Component`)
     return (
-        <>
+        <div className="container mx-auto p-4">
             <p>useCallback function hooks return memoized call back function, or we can say that it is used for optimize the component or preventing the component from render when its dependencis not change</p>
             <div className="flex items-center justify-center">
                 <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
@@ -85,7 +85,7 @@ const UseCallBack = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 
 }

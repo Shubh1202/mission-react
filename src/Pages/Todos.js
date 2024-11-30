@@ -3,7 +3,7 @@ import { memo } from "react";
 const Todos = ({ todos = [], addTodo = '', removeToDo = '' }) => {
     console.log(`children render`)
     return (
-        <>
+        <div className="container mx-auto p-4">
             <h2>My Todos</h2>
             <div className="">
                 <div>
@@ -19,7 +19,7 @@ const Todos = ({ todos = [], addTodo = '', removeToDo = '' }) => {
 
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

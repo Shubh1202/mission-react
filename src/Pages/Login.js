@@ -1,12 +1,10 @@
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash  } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
 
     let [isHidePassword, hideShowPassword] = useState(true)
-
-    function hidePassword() {
-        hideShowPassword(!isHidePassword)
-    }
 
     return (
         <div className="container mx-auto p-4">
@@ -26,8 +24,8 @@ const Login = () => {
                             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">Password</label>
                             <div className='relative'>
                                 <input type={isHidePassword ? 'password' : 'text'} id="password" name="password" className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="••••••••" required />
-                                <button type='button' className='absolute top-0 right-0 px-4 py-2 flex items-center text-gray-500 border border-gray-300 hover:cursor-pointer hover:text-blue-500 rounded-lg'>
-                                    <span onClick={() => hidePassword()}>{isHidePassword ? 'Show' : 'Hide'}</span>
+                                <button type='button' onClick={() => hideShowPassword(!isHidePassword)} className='absolute top-0 right-0 py-3 px-4 flex items-center text-gray-500 hover:cursor-pointer hover:text-blue-500 rounded-lg'>
+                                    {isHidePassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
                                 </button>
 
                             </div>

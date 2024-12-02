@@ -16,6 +16,7 @@ import PageNotFound from '../Pages/PageNotFound'
 import UseCallBack from '../Pages/UseCallBack'
 import ToDoo from '../Pages/ToDoo'
 import CurrencyConverter from '../Pages/CurrencyConverter'
+import TicTacToe from '../Pages/TicTacToe'
 
 const RoutesContainer = () => {
     return (
@@ -38,6 +39,7 @@ const RoutesContainer = () => {
                             <Route path='to-doo' element={<ToDoo />} />
                             <Route path='hook-test' element={<ToDoo />} />
                             <Route path='currency-converter' element={<CurrencyConverter />} />
+                            <Route path='tic-tac-toe' element={<TicTacToe />} />
                             <Route path='*' element={<PageNotFound />} />
                         </Routes>
                     </div>

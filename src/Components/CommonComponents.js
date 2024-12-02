@@ -10,30 +10,37 @@ const iconMap = {
 
 const PageHeroSection = (props) => {
     return (
-        <div className="bg-blue-600 text-white py-16">
-            <div className="container mx-auto text-center">
-                <h1 className="text-4xl font-bold">{props.title}</h1>
-                <p className="text-lg mt-2">{props.subTitle}</p>
-            </div>
+      <div className="bg-blue-600 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+            {props.title}
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl mt-4 sm:mt-6 md:mt-8">
+            {props.subTitle}
+          </p>
         </div>
-    )
-}
+      </div>
+    );
+  };
 
-const CallToAction = (props) => {
+  const CallToAction = (props) => {
     return (
-        <section className="py-16 bg-blue-600 text-center text-white">
-            <div className="container mx-auto text-center">
-                <h2 className="text-3xl font-bold">{props?.title || 'Ready to Get Started?'}</h2>
-                <p className="text-lg mt-2">
-                    {props?.subTitle || 'Join our community and start building amazing projects today!'}
-                </p>
-                <button className="mt-6 px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition">
-                    {props?.buttonText || 'Sign Up Now'}
-                </button>
-            </div>
-        </section>
-    )
-}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-blue-600 text-center text-white">
+        <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            {props?.title || 'Ready to Get Started?'}
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl mt-4 sm:mt-6">
+            {props?.subTitle || 'Join our community and start building amazing projects today!'}
+          </p>
+          <button className="mt-6 sm:mt-8 px-6 sm:px-8 py-2 sm:py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition duration-200 ease-in-out">
+            {props?.buttonText || 'Sign Up Now'}
+          </button>
+        </div>
+      </section>
+    );
+  };
+  
 
 const AboutSection = () => {
     return (

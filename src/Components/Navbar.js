@@ -10,6 +10,7 @@ const menuList = [
     { route: '/', title: 'Home' },
     { route: '/about-us', title: 'About Us' },
     { route: '/contact-us', title: 'Contact Us' },
+    { route: '/tic-tac-toe', title: 'Game'},
     // { route: '/react-props', title: 'React Props' },
     // { route: '/react-list', title: 'React List' },
     { route: '/bg-color-changer', title: 'BG Changer' },

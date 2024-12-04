@@ -10,7 +10,6 @@ const Home = () => {
             <FeatureSection />
             <Testimonial />
             <CallToAction title='Ready to Get Started?' subTitle={`Join our community and start building amazing projects today!`} buttonText='Sign Up Now' />
-
         </>
     )
 }

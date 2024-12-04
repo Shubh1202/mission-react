@@ -63,7 +63,6 @@ const BGChanger = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 

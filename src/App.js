@@ -1,5 +1,4 @@
 import './App.css'
-import 'flowbite';
 import Layout from './Layout'
 
 const App = () => {

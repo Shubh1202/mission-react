@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
-import Logo from '../assets/logo513.png'
+// import Logo from '../assets/logo513.png'
 import { NavContactInfoSection } from './CommonComponents'
 import JsonData from '../Data/Data.json'
 

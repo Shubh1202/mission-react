@@ -10,7 +10,7 @@ const iconMap = {
 
 const PageHeroSection = (props) => {
     return (
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="sm:hidden bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 sm:py-12 md:py-16 lg:py-20">
             <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
                     {props.title}

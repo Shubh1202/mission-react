@@ -9,7 +9,7 @@ import PageNotFound from "./Pages/PageNotFound";
 import CurrencyConverter from "./Pages/CurrencyConverter";
 import BGChanger from "./Pages/BGChanger";
 import RandomString from "./Pages/RandomString";
-import TicTacToe from "./Pages/TicTacToe";
+import TicTakToe from "./Pages/TicTakToe";
 
 const Layout = () => {
     return (
@@ -24,7 +24,7 @@ const Layout = () => {
                         <Route path="/currency-convert" element={<CurrencyConverter />} />
                         <Route path="/background-changer" element={<BGChanger />} />
                         <Route path="/password-generator" element={<RandomString />} />
-                        <Route path="/tic-tak-toe" element={<TicTacToe />} />
+                        <Route path="/tic-tak-toe" element={<TicTakToe />} />
                         <Route path="*" element={<PageNotFound />} />
                     </Routes>
                 </main>
